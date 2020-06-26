@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
 import { NgbDateStruct, NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -20,6 +20,10 @@ export class ComponentsComponent implements OnInit {
   unpauseOnArrow = false;
   pauseOnIndicator = false;
   pauseOnHover = true;
+
+  private toggleButton: any;
+  private sidebarVisible: boolean;
+
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 
